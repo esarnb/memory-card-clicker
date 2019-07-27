@@ -1,50 +1,50 @@
 [
   {
     "name": "Image Card",
-    "image": "../public/img/background (1).jpg"
+    "image": "./img/bg1.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (2).jpg"
+    "image":  "./img/bg2.jpg"
   },
   {
     "name": "Image Card",
-    "image": "../public/img/background (3).jpg"
+    "image": "./img/bg3.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (4).jpg"
+    "image":  "./img/bg4.jpg"
   },
   {
     "name": "Image Card",
-    "image": "../public/img/background (5).jpg"
+    "image": "./img/bg5.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (6).jpg"
+    "image":  "./img/bg6.jpg"
   },
   {
     "name": "Image Card",
-    "image": "../public/img/background (7).jpg"
+    "image": "./img/bg7.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (8).jpg"
+    "image":  "./img/bg8.jpg"
   },
   {
     "name": "Image Card",
-    "image": "../public/img/background (9).jpg"
+    "image": "./img/bg9.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (10).jpg"
+    "image":  "./img/bg10.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (11).jpg"
+    "image":  "./img/bg11.jpg"
   },
   {
     "name": "Image Card",
-    "image":  "../public/img/background (12).jpg"
+    "image":  "./img/bg12.jpg"
   }
 ]
