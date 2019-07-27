@@ -59,7 +59,7 @@ class App extends React.Component {
       enableDebuggingMode ? console.log("Selected Card: ", this.state.clickedCards) : enableDebuggingMode = false;
   
       //When the user reaches all one-time-clicked cards, run the end game function displaying a win, else shuffle for the next click.
-      if (this.state.currentCards.length === this.state.clickedCards.length) this.endGame("You Win!")
+      if (this.state.currentCards.length === newClicked.length) this.endGame("You Win!")
       else this.shuffleCards();
     }
   };
