@@ -42,22 +42,31 @@ class App extends React.Component {
   };
 
   selectedCard = (id) => {
+    console.log("Selecting Card: ", this.state.clickedCards);
+    
     //Increment score if user clicks correctly, else run the end game function displaying a loss.
     let newClicked = [...this.state.clickedCards, id];
     this.setState({clickedCards: newClicked});
+    console.log("Selected Card: ", this.state.clickedCards);
+    
     if (this.state.clickedCards.includes(id)) this.endGame("You Lost!")
-    else {
-      let newIncrement = this.state.currentScore++;
-      this.setState({currentScore: newIncrement});
-    }
-
-    //If the current score gets higher than the high score, update high score to current score
-    if (this.state.currentScore > this.state.highScore) this.setState({highScore: this.state.currentScore});
+    else this.incrementScores()
 
     //When the user reaches all one-time-clicked cards, run the end game function displaying a win, else shuffle for the next click.
     if (this.state.currentCards.length == this.state.clickedCards.length) this.endGame("You Win!")
     else this.shuffleCards();
   };
+
+  incrementScores = () => {
+    console.log(`Incrementing Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
+    let newIncrement = this.state.currentScore++;
+    this.setState({currentScore: newIncrement});
+
+    //If the current score gets higher than the high score, update high score to current score
+    if (this.state.currentScore > this.state.highScore) this.setState({highScore: this.state.currentScore});
+    console.log(`Incremented Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
+
+  }
   
   shuffleCards = () => {
     var tempCards = this.state.currentCards
@@ -73,12 +82,12 @@ class App extends React.Component {
     this.setState({currentCards: tempCards})
   };
 
-  endGame = () => {
-    this.setState({currentCards: <h2>You Lost!</h2>, currentScore: 0});
-
+  endGame = (prompt) => {
+    console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);    
+    this.setState({currentCards: <h2>{prompt}</h2>, currentScore: 0, clickedCards: []});
+    console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);
+    
   }
-
-
 
   displayCards = () => {
     return this.state.currentCards
