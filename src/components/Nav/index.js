@@ -6,7 +6,7 @@ function Nav(props) {
 
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">Memory Card Clicker</a>
-      <span className="moveRight">Points: {props.currentScore} | High Score: {props.highScore} </span>
+      <span className="navbar-text">Points: {props.currentScore} | High Score: {props.highScore} </span>
     </nav>
   )
 }

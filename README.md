@@ -1,3 +1,32 @@
+# Memory Card Clicker
+
+![Clicking Game Demo](public/img/clicky.gif)
+Memory Card Clicker is a clicking game, where clicking all twelve photos only once, wins the game! Careful though, if you click an image twice, you lose!
+
+Try out the game: [https://esarnb.github.io/memory-card-clicker/](https://esarnb.github.io/memory-card-clicker/)
+
+## Prerequisites:
+
+* You must download the entire repo for the application to work correctly.
+
+* You must have [NodeJS](https://nodejs.org/en/) installed on your machine.
+
+## Installation
+
+* Run `npm install` in the root directory to install dependencies:
+
+  * gh-pages: ^2.0.1,
+  * react: ^16.8.6",
+  * react-dom: ^16.8.6,
+  * react-scripts: v3.0.1
+
+
+## Deployment
+
+* Running `npm start` in the root directory will execute the react app and bind the application
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +95,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+----
+
+## Author:
+
+* Esar Behlum
+
+----

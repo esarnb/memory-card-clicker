@@ -91,7 +91,7 @@ class App extends React.Component {
 
   endGame = (prompt) => {
     enableDebuggingMode ? console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards) : enableDebuggingMode = false;    
-    this.setState({currentCards: [<h2>{prompt}</h2>, <br /> , <a onClick={() => this.generateCards()}>Click Here to Play Again!</a>], currentScore: 0, clickedCards: []});
+    this.setState({currentCards: [<h2> <a onClick={() => this.generateCards()}> {prompt} Click Here to Play Again!</a> </h2>], currentScore: 0, clickedCards: []});
     enableDebuggingMode ? console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards) : enableDebuggingMode = false;
     
   }
