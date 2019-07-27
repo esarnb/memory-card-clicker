@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/memory-card-clicker/static/css/main.88218802.chunk.css",
-    "main.js": "/memory-card-clicker/static/js/main.37bb9702.chunk.js",
-    "main.js.map": "/memory-card-clicker/static/js/main.37bb9702.chunk.js.map",
+    "main.js": "/memory-card-clicker/static/js/main.e143456b.chunk.js",
+    "main.js.map": "/memory-card-clicker/static/js/main.e143456b.chunk.js.map",
     "runtime~main.js": "/memory-card-clicker/static/js/runtime~main.427c719f.js",
     "runtime~main.js.map": "/memory-card-clicker/static/js/runtime~main.427c719f.js.map",
     "static/js/2.f75e8bbc.chunk.js": "/memory-card-clicker/static/js/2.f75e8bbc.chunk.js",
     "static/js/2.f75e8bbc.chunk.js.map": "/memory-card-clicker/static/js/2.f75e8bbc.chunk.js.map",
     "index.html": "/memory-card-clicker/index.html",
-    "precache-manifest.33a1560c72c303aa97636dc05b899f1e.js": "/memory-card-clicker/precache-manifest.33a1560c72c303aa97636dc05b899f1e.js",
+    "precache-manifest.c752fe1709bede94ed6f13e2e7232caa.js": "/memory-card-clicker/precache-manifest.c752fe1709bede94ed6f13e2e7232caa.js",
     "service-worker.js": "/memory-card-clicker/service-worker.js",
     "static/css/main.88218802.chunk.css.map": "/memory-card-clicker/static/css/main.88218802.chunk.css.map"
   }
