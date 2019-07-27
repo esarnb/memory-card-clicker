@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/memory-card-clicker/static/css/main.2cce8147.chunk.css",
-    "main.js": "/memory-card-clicker/static/js/main.45aff656.chunk.js",
-    "main.js.map": "/memory-card-clicker/static/js/main.45aff656.chunk.js.map",
+    "main.css": "/memory-card-clicker/static/css/main.88218802.chunk.css",
+    "main.js": "/memory-card-clicker/static/js/main.ac3b493b.chunk.js",
+    "main.js.map": "/memory-card-clicker/static/js/main.ac3b493b.chunk.js.map",
     "runtime~main.js": "/memory-card-clicker/static/js/runtime~main.427c719f.js",
     "runtime~main.js.map": "/memory-card-clicker/static/js/runtime~main.427c719f.js.map",
-    "static/js/2.b41502e9.chunk.js": "/memory-card-clicker/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/memory-card-clicker/static/js/2.b41502e9.chunk.js.map",
+    "static/js/2.f75e8bbc.chunk.js": "/memory-card-clicker/static/js/2.f75e8bbc.chunk.js",
+    "static/js/2.f75e8bbc.chunk.js.map": "/memory-card-clicker/static/js/2.f75e8bbc.chunk.js.map",
     "index.html": "/memory-card-clicker/index.html",
-    "precache-manifest.b6559ff273431cab5a9aead10bc58a18.js": "/memory-card-clicker/precache-manifest.b6559ff273431cab5a9aead10bc58a18.js",
+    "precache-manifest.28ad671cb7f7c7bb98b2a759bd024cb9.js": "/memory-card-clicker/precache-manifest.28ad671cb7f7c7bb98b2a759bd024cb9.js",
     "service-worker.js": "/memory-card-clicker/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/memory-card-clicker/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/memory-card-clicker/static/media/logo.5d5d9eef.svg"
+    "static/css/main.88218802.chunk.css.map": "/memory-card-clicker/static/css/main.88218802.chunk.css.map"
   }
 }
