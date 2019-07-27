@@ -5,6 +5,10 @@ import cardsList from "./data.json";
 import "./App.css";
 import Nav from "./components/Nav";
 
+//Global variable to enable all logs available.
+//If false, keep it false (react requirement for assignment)
+var enableDebuggingMode = false; 
+
 class App extends React.Component {
   state = {
     currentScore: 0,
@@ -25,7 +29,7 @@ class App extends React.Component {
     @ * : All else are card data properties
   */
   generateCards = () => {
-    console.log("Generating Cards");
+    enableDebuggingMode ? console.log("Generating Cards") : enableDebuggingMode = false;
     
     let cards =  cardsList.map((singleCard, i) => {
       return <Card
@@ -41,7 +45,7 @@ class App extends React.Component {
   };
 
   selectedCard = (id) => {
-    console.log("Selecting Card: ", this.state.clickedCards);
+    enableDebuggingMode ? console.log("Selecting Card: ", this.state.clickedCards) : enableDebuggingMode = false;
     
     
     if (this.state.clickedCards.includes(id)) this.endGame("You Lost!")
@@ -52,7 +56,7 @@ class App extends React.Component {
       let newClicked = [...this.state.clickedCards, id];
       this.setState({clickedCards: newClicked});
 
-      console.log("Selected Card: ", this.state.clickedCards);
+      enableDebuggingMode ? console.log("Selected Card: ", this.state.clickedCards) : enableDebuggingMode = false;
   
       //When the user reaches all one-time-clicked cards, run the end game function displaying a win, else shuffle for the next click.
       if (this.state.currentCards.length === this.state.clickedCards.length) this.endGame("You Win!")
@@ -61,14 +65,14 @@ class App extends React.Component {
   };
 
   incrementScores = () => {
-    console.log(`Incrementing Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
+    enableDebuggingMode ? console.log(`Incrementing Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`) : enableDebuggingMode = false;
     let currentHighScore = this.state.highScore;
     let newIncrement = this.state.currentScore + 1; //do a (+1) not a (++)
     this.setState({currentScore: newIncrement});
 
     //If the current score gets higher than the high score, update high score to current score
     if (newIncrement > currentHighScore) this.setState({highScore: newIncrement});
-    console.log(`Incremented Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
+    enableDebuggingMode ? console.log(`Incremented Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`) : enableDebuggingMode = false;
   }
   
   shuffleCards = () => {
@@ -86,9 +90,9 @@ class App extends React.Component {
   };
 
   endGame = (prompt) => {
-    console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);    
+    enableDebuggingMode ? console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards) : enableDebuggingMode = false;    
     this.setState({currentCards: [<h2>{prompt}</h2>, <br /> , <a onClick={() => this.generateCards()}>Click Here to Play Again!</a>], currentScore: 0, clickedCards: []});
-    console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);
+    enableDebuggingMode ? console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards) : enableDebuggingMode = false;
     
   }
 
