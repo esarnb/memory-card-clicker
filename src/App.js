@@ -33,7 +33,6 @@ class App extends React.Component {
         key={`Card-Unit-${i}`}
         name={singleCard.name}
         image={singleCard.image}
-        shuffleCards={this.shuffleCards}
         selectedCard={this.selectedCard}
       />
     })
@@ -44,28 +43,32 @@ class App extends React.Component {
   selectedCard = (id) => {
     console.log("Selecting Card: ", this.state.clickedCards);
     
-    //Increment score if user clicks correctly, else run the end game function displaying a loss.
-    let newClicked = [...this.state.clickedCards, id];
-    this.setState({clickedCards: newClicked});
-    console.log("Selected Card: ", this.state.clickedCards);
     
     if (this.state.clickedCards.includes(id)) this.endGame("You Lost!")
-    else this.incrementScores()
+    else {
+      this.incrementScores();
 
-    //When the user reaches all one-time-clicked cards, run the end game function displaying a win, else shuffle for the next click.
-    if (this.state.currentCards.length == this.state.clickedCards.length) this.endGame("You Win!")
-    else this.shuffleCards();
+      //Increment score if user clicks correctly, else run the end game function displaying a loss.
+      let newClicked = [...this.state.clickedCards, id];
+      this.setState({clickedCards: newClicked});
+
+      console.log("Selected Card: ", this.state.clickedCards);
+  
+      //When the user reaches all one-time-clicked cards, run the end game function displaying a win, else shuffle for the next click.
+      if (this.state.currentCards.length === this.state.clickedCards.length) this.endGame("You Win!")
+      else this.shuffleCards();
+    }
   };
 
   incrementScores = () => {
     console.log(`Incrementing Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
-    let newIncrement = this.state.currentScore++;
+    let currentHighScore = this.state.highScore;
+    let newIncrement = this.state.currentScore + 1; //do a (+1) not a (++)
     this.setState({currentScore: newIncrement});
 
     //If the current score gets higher than the high score, update high score to current score
-    if (this.state.currentScore > this.state.highScore) this.setState({highScore: this.state.currentScore});
+    if (newIncrement > currentHighScore) this.setState({highScore: newIncrement});
     console.log(`Incremented Current: ${this.state.currentScore} HighScore: ${this.state.highScore}`);
-
   }
   
   shuffleCards = () => {
@@ -84,7 +87,7 @@ class App extends React.Component {
 
   endGame = (prompt) => {
     console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);    
-    this.setState({currentCards: <h2>{prompt}</h2>, currentScore: 0, clickedCards: []});
+    this.setState({currentCards: [<h2>{prompt}</h2>, <br /> , <a onClick={() => this.generateCards()}>Click Here to Play Again!</a>], currentScore: 0, clickedCards: []});
     console.log(`Ending Game, Current: ${this.state.currentScore} HighScore: ${this.state.highScore} Cards: `, this.state.currentCards);
     
   }
